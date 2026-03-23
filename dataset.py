@@ -50,6 +50,15 @@ SAMPLE_POSTS = [
     "This is fine",
     "So excited for the weekend",
     "I am not happy about this",
+    # --- Added posts (sarcasm, slang, emojis, mixed, negation, neutral) ---
+    "Oh great, another group project, just what I needed",
+    "That concert was lowkey fire ngl",
+    "Just got accepted!!! 😭🎉",
+    "I'm fine 🙂",
+    "Exhausted but proud of what we built",
+    "This homework is actually killing me 💀",
+    "I have a meeting at 3pm",
+    "I can't complain about the weather today",
 ]
 
 # Human labels for each post above.
@@ -65,6 +74,15 @@ TRUE_LABELS = [
     "neutral",   # "This is fine"
     "positive",  # "So excited for the weekend"
     "negative",  # "I am not happy about this"
+    # --- Labels for added posts ---
+    "negative",  # sarcasm — surface positive, actual negative
+    "positive",  # slang — "fire" means good
+    "positive",  # emoji celebration — happy tears
+    "negative",  # passive-aggressive "fine" with 🙂
+    "mixed",     # exhausted but proud
+    "negative",  # hyperbolic negative
+    "neutral",   # plain factual statement
+    "positive",  # negation flipping — "can't complain" = positive
 ]
 
 # TODO: Add 5-10 more posts and labels.
