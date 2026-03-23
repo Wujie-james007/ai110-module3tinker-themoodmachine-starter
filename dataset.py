@@ -23,6 +23,10 @@ POSITIVE_WORDS = [
     "chill",
     "relaxed",
     "amazing",
+    # emoji-derived and slang
+    "celebration",
+    "laughing",
+    "fire",
 ]
 
 NEGATIVE_WORDS = [
@@ -36,6 +40,10 @@ NEGATIVE_WORDS = [
     "stressed",
     "hate",
     "boring",
+    # emoji-derived
+    "sadsmile",
+    "slightsmile",
+    "killing",
 ]
 
 # ---------------------------------------------------------------------
