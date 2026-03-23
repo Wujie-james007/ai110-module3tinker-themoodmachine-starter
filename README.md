@@ -65,3 +65,9 @@ During this lab you will:
 - When debugging, print tokens, scores, or intermediate choices.
 - Ask an AI assistant to help create edge case posts or unusual wording.
 - Try examples that mislead or confuse your model. Failure cases teach you the most.
+
+---
+
+## TF Summary
+
+The core concept students need to understand is that rule-based classifiers depend entirely on the vocabulary and logic you define — they have no understanding of meaning, context, or tone, which is why sarcasm and slang break them so easily. Students are most likely to struggle with implementing negation handling correctly (knowing when to reset the negate flag after a non-sentiment word) and understanding why "mixed" detection requires checking for both positive and negative word presence rather than just looking at the final score. AI assistants are helpful for brainstorming diverse test posts and explaining error traces, but they tend to over-engineer solutions by suggesting complex NLP pipelines when the activity calls for small, deliberate changes — students should be guided to keep fixes targeted. When a student's model misclassifies a sentence, a good guiding question is: "What happens when you print the tokens for that sentence? Which specific token is causing the wrong score?" This leads them to debug their own logic rather than asking for a ready-made fix. Comparing the rule-based model (76% accuracy) to the ML model (94%) reveals that memorization on a tiny dataset is not the same as understanding — the ML model gets sarcasm right only because it saw that exact example during training.
