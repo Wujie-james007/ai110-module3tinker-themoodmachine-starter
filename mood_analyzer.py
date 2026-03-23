@@ -133,6 +133,14 @@ class MoodAnalyzer:
         Just remember that whatever labels you return should match the labels
         you use in TRUE_LABELS in dataset.py if you care about accuracy.
         """
+        tokens = self.preprocess(text)
+        has_pos = any(t in self.positive_words for t in tokens)
+        has_neg = any(t in self.negative_words for t in tokens)
+
+        # If both positive and negative words are present, call it mixed
+        if has_pos and has_neg:
+            return "mixed"
+
         score = self.score_text(text)
         if score > 0:
             return "positive"

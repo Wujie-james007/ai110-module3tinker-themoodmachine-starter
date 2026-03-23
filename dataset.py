@@ -27,6 +27,10 @@ POSITIVE_WORDS = [
     "celebration",
     "laughing",
     "fire",
+    # added from stress testing
+    "proud",
+    "accepted",
+    "hopeful",
 ]
 
 NEGATIVE_WORDS = [
@@ -44,6 +48,9 @@ NEGATIVE_WORDS = [
     "sadsmile",
     "slightsmile",
     "killing",
+    # added from stress testing
+    "exhausted",
+    "stuck",
 ]
 
 # ---------------------------------------------------------------------
@@ -67,6 +74,10 @@ SAMPLE_POSTS = [
     "This homework is actually killing me 💀",
     "I have a meeting at 3pm",
     "I can't complain about the weather today",
+    # --- Breaker sentences (stress test) ---
+    "I love getting stuck in traffic",
+    "This is sick bro",
+    "Not bad at all",
 ]
 
 # Human labels for each post above.
@@ -91,6 +102,10 @@ TRUE_LABELS = [
     "negative",  # hyperbolic negative
     "neutral",   # plain factual statement
     "positive",  # negation flipping — "can't complain" = positive
+    # --- Labels for breaker sentences ---
+    "negative",  # sarcasm — "love" + "stuck" but actually frustrated
+    "positive",  # slang — "sick" means cool, but not in our word list
+    "positive",  # negation — "not bad" should flip to positive
 ]
 
 # TODO: Add 5-10 more posts and labels.
